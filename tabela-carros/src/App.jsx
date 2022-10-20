@@ -45,12 +45,22 @@ function GerarTabela(marca){
   )
 }
 
+function pesquisa(marca, setMarca){
+  return(
+    <section>
+      <label>Digite uma marca:</label>
+      <input type = "text" value = {marca} onChange = {(e) => setMarca(e.target.value)}></input>
+    </section>
+  )
+}
+
 export function App() {
   
   const [marca, setMarca] = useState('');
 
   return(
     <>
+      {pesquisa(marca, setMarca)}
       {GerarTabela(marca)}
     </>
   )
