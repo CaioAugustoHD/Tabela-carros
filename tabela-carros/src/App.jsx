@@ -1,5 +1,6 @@
 import React from "react"
 import { useState } from "react";
+import { Header } from "./componentes/Header";
 
 const carros = [
   {modelo:"Mobi", marca:"Fiat", preco:"65 mil"},
@@ -60,6 +61,7 @@ export function App() {
 
   return(
     <>
+      <Header/>
       {pesquisa(marca, setMarca)}
       {GerarTabela(marca)}
     </>
