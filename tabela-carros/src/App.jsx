@@ -9,7 +9,23 @@ const carros = [
   {modelo:"Corolla", marca:"Toyota", preço:"160 mil"}
 ]
 
-export default function App() {
+function GerarTabela(){
+  return(
+    <table border="1" style={{borderCollapse: "collapse"}}>
+      <thead>
+        <tr>
+          <th>Modelo</th>
+          <th>Marca</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+    </table>
+  )
+}
+
+export function App() {
   
-  return <h1>Hello word!</h1>
+  return(
+      <GerarTabela/>
+  )
 }
