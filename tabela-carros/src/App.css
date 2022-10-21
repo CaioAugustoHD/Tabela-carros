@@ -1,0 +1,27 @@
+section, table {
+    background-color: rgb(129, 129, 176);
+    width: min(470px, 80%);
+    min-width: 280px;
+    margin: auto;
+}
+
+section {
+    padding: 2em 15px;
+}
+
+section label {
+    font-weight: 700;
+}
+
+section input {
+    width: 100%;
+    padding: 8px;
+    outline: 0;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+table td, table th {
+    text-align: center;
+    padding: 5px;
+}

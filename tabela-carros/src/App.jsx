@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react";
 import { Header } from "./componentes/Header";
+import "./App.css"
 
 const carros = [
   {modelo:"Mobi", marca:"Fiat", preco:"65 mil"},
