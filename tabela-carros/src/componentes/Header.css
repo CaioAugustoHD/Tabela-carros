@@ -7,7 +7,7 @@
 }
 
 header {
-    background-color: rgb(129, 129, 176);
+    background-color: #77def3;
     width: min(470px, 80%);
     min-width: 280px;
     margin: auto;
@@ -18,6 +18,7 @@ header {
 
 header h1 {
     margin-bottom: 1em;
+    color: rgb(21,21,21);
 }
 
 header img {
