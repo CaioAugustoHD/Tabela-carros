@@ -23,10 +23,16 @@ section input {
     color: rgb(21,21,21);
     background-color: #CAF0F8;
     border: 1px solid transparent;
+    border-radius: 7px;
 }
 
 section input:focus {
     border: 1px solid rgb(21,21,21);
+}
+
+table {
+    border-radius: 10px;
+    border-collapse: collapse;
 }
 
 table td, th {

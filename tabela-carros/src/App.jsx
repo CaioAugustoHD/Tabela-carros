@@ -32,7 +32,7 @@ function linhaTabela(marca){
 
 function GerarTabela(marca){
   return(
-    <table style={{borderCollapse: "collapse"}}>
+    <table>
       <thead>
         <tr>
           <th>Modelo</th>
