@@ -24,4 +24,22 @@ header h1 {
 
 header img {
     width: 80px;
+    filter: drop-shadow(0 0 6px #03045E);
+}
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    img {
+        animation: spin infinite 20s linear;
+    }
 }

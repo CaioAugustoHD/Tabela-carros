@@ -33,6 +33,7 @@ section input:focus {
 table {
     border-radius: 10px;
     border-collapse: collapse;
+    margin-bottom: 1%;
 }
 
 table td, th {
