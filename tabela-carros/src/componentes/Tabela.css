@@ -1,0 +1,23 @@
+table {
+    background-color: #77def3;
+    width: min(470px, 80%);
+    min-width: 280px;
+    margin: auto;
+    border-radius: 10px;
+    border-collapse: collapse;
+    margin-bottom: 1%;
+}
+
+table td, th {
+    text-align: center;
+    padding: 8px;
+}
+
+table th {
+    background-color: #77def3;
+}
+
+tr:nth-child(odd){
+    background-color: rgb(168, 235, 248)
+}
+

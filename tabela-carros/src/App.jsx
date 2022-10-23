@@ -1,7 +1,8 @@
 import React from "react"
 import { useState } from "react";
 import { Header } from "./componentes/Header";
-import "./App.css"
+import "./App.css";
+import { Tabela } from "./componentes/Tabela";
 
 const carros = [
   {modelo:"Mobi", marca:"Fiat", preco:"65 mil"},
@@ -12,46 +13,13 @@ const carros = [
   {modelo:"Corolla", marca:"Toyota", preco:"160 mil"}
 ]
 
-function linhaTabela(marca){
 
-  let linha = [];
-
-  carros.forEach((carro) => {
-    if(marca.toUpperCase() == carro.marca.toUpperCase() || marca == ''){
-      linha.push(
-        <tr>
-          <td>{carro.modelo}</td>
-          <td>{carro.marca}</td>
-          <td>{carro.preco}</td>
-        </tr>
-      )
-    }
-  })
-  return linha;
-}
-
-function GerarTabela(marca){
-  return(
-    <table>
-      <thead>
-        <tr>
-          <th>Modelo</th>
-          <th>Marca</th>
-          <th>Preço</th>
-        </tr>
-      </thead>
-      <tbody>
-        {linhaTabela(marca)}
-      </tbody>
-    </table>
-  )
-}
 
 function pesquisa(marca, setMarca){
   return(
     <section>
       <label>Digite uma marca:</label>
-      <input type = "text" value = {marca} onChange = {(e) => setMarca(e.target.value)}></input>
+      <input type = "text" value = {marca} onChange = {(e) => setMarca(e.target.value.toUpperCase())}></input>
     </section>
   )
 }
@@ -60,11 +28,15 @@ export function App() {
   
   const [marca, setMarca] = useState('');
 
+  const carrosFiltradosPorMarca = carros.filter(carro => {
+    return carro.marca.toUpperCase().includes(marca);
+  })
+
   return(
     <>
       <Header/>
       {pesquisa(marca, setMarca)}
-      {GerarTabela(marca)}
+      <Tabela carrosFiltradosPorMarca = {carrosFiltradosPorMarca}/>
     </>
   )
 }
