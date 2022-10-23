@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Header } from "./componentes/Header";
 import "./App.css";
 import { Tabela } from "./componentes/Tabela";
+import { Input } from "./componentes/Input";
 
 const carros = [
   {modelo:"Mobi", marca:"Fiat", preco:"65 mil"},
@@ -15,14 +16,6 @@ const carros = [
 
 
 
-function pesquisa(marca, setMarca){
-  return(
-    <section>
-      <label>Digite uma marca:</label>
-      <input type = "text" value = {marca} onChange = {(e) => setMarca(e.target.value.toUpperCase())}></input>
-    </section>
-  )
-}
 
 export function App() {
   
@@ -35,7 +28,7 @@ export function App() {
   return(
     <>
       <Header/>
-      {pesquisa(marca, setMarca)}
+      <Input marca={marca} setMarca={setMarca}/>
       <Tabela carrosFiltradosPorMarca = {carrosFiltradosPorMarca}/>
     </>
   )
