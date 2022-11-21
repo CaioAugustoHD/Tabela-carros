@@ -14,7 +14,7 @@ export function Tabela(props){
         <tbody>
           {props.carrosFiltradosPorMarca.map(carro => {
             return(
-                <tr>
+                <tr key={carro.modelo}>
                     <td>{carro.modelo}</td>
                     <td>{carro.marca}</td>
                     <td>{carro.preco}</td>
